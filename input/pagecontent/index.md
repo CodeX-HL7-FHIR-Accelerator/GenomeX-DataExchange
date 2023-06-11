@@ -15,7 +15,7 @@ This first draft will focus on the following:
 * somatic tests
 * oncology-related GRIG profiles - Tumor mutation burden (TMB) and microsatellite instability (MSI)
 
-The following items are considered out of scope:
+The following topics may include guidance but are not definitively in-scope at this time:
 * therapeutic drug implications
 * applicable clinical trials
 * germline tests
