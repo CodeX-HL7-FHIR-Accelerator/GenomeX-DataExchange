@@ -10,7 +10,7 @@ InstanceOf: Patient
 Description: "GenomeX Example of NGS Patient"
 * identifier.use = #usual
 * identifier[0].type = IDTYPE#PT "Patient external identifier"
-* identifier[0].system = "https://www.tempus.com"
+* identifier[0].system = "https://www.laborg1.com"
 * identifier[0].value = "22ea1d1b-03a5-47d6-81e0-b9b4cbb15ccf"
 * identifier[1].type = IDTYPE#MR "Medical Record Number"
 * identifier[1].system = "http://hospital.example.org"
@@ -25,31 +25,31 @@ Description: "GenomeX Example of NGS Patient"
 * address.country = "US"
 
 
-Instance: gx1-order-tumornormal-tempus-inc
+Instance: gx1-order-tumornormal-laborg1-inc
 InstanceOf: ServiceRequest
 Description: "GenomeX example: Order information"
 * identifier[0].type = IDTYPE#FILL "Filler Identifier"
-* identifier[0].system = "https://www.tempus.com"
+* identifier[0].system = "https://www.laborg1.com"
 * identifier[0].value = "22howe"
 * status = #completed
 * intent = #order
 * subject = Reference(gx1-patient-adam-anyperson)
-* code = https://www.tempus.com#XT.V4 "xT - 648 gene panel"
+* code = https://www.laborg1.com#XT.V4 "xT - 648 gene panel"
 * reasonCode[0].coding[0] = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
 * reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
 
-Instance: gx1-organization-tempus-inc
+Instance: gx1-organization-laborg1-inc
 InstanceOf: Organization
 Description: "GenomeX example: example organization"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
-* name = "Tempus Labs, Inc."
+* name = "laborg1 Labs, Inc."
 * identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"
 * identifier[0].value = "14D2114007"
 * telecom[0].system = #phone
 * telecom[0].value = "999-999-9999"
 * telecom[1].system = #email
-* telecom[1].value = "support@tempus.com"
+* telecom[1].value = "support@laborg1.com"
 * telecom.use = #work
 * address.line = "600 West Chicago Avenue, Ste 510"
 * address.city = "Chicago"
@@ -356,9 +356,9 @@ Description: "GenomeX Example for Genomics Report"
 * status = #final "Final"
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(gx1-patient-adam-anyperson)
-* performer = Reference(gx1-organization-tempus-inc)
+* performer = Reference(gx1-organization-laborg1-inc)
 * effectiveDateTime = "2022-02-15T19:28:58+05:00"
-* basedOn = Reference(gx1-order-tumornormal-tempus-inc)
+* basedOn = Reference(gx1-order-tumornormal-laborg1-inc)
 * resultsInterpreter = Reference(gx1-practitioner-test-pathologist)
 * specimen[0] = Reference(Specimen/gx1-specimen-tumornormal-tumor)
 * specimen[1] = Reference(Specimen/gx1-specimen-tumornormal-normal)

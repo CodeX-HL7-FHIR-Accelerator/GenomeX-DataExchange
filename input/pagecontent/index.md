@@ -45,6 +45,8 @@ The transport group focuses on the messaging protocol established among sending 
 
 #### Genomic data transport
 
+The sequence diagram is shown below:
+**Insert Transport diagram containing HL7v2 with reference pointer**
 ### Credits
 
 Our thanks to the contributors to the CodeX/GenomeX data exchange workstream which drive the guidance in this IG:
