@@ -37,6 +37,8 @@ The transport group focuses on the messaging protocol established among sending 
 
 ### Conceptual Diagrams
 
+TO DO: Insert diagram.
+
 #### Genomic Payload
 
 <object data="gdx_profiles.svg" type="image/svg+xml"></object>
