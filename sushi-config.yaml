@@ -47,12 +47,9 @@ dependencies:
 pages:
   index.md:
     title: GenomeX Data Exchange
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
-#
+  transport.md:
+    title: Transport Messaging
+
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
