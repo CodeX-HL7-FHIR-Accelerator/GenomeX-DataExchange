@@ -23,3 +23,8 @@ Description: "GenomeX subset of genomic variant."
 // * component[allelic-state] and component[allelic-state].code and component[allelic-state].value[x] MS
 * status and category and code and subject and effective[x] and effectiveDateTime and value[x] and dataAbsentReason and specimen and component MS
 
+Profile: GdxTherapeuticImplication
+Parent: TherapeuticImplication
+Description: "GenomeX subset of genomic variant."
+* subject 1..1 
+* subject only Reference(Patient)
