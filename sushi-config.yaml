@@ -49,6 +49,8 @@ pages:
     title: GenomeX Data Exchange
   transport.md:
     title: Transport Messaging
+  example_extended.md:
+    title: Extended Example
 
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -75,6 +77,8 @@ parameters:
 menu:
   Home: index.html
   Artifacts: artifacts.html
+  Examples:
+    Extended Example: example_extended.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
