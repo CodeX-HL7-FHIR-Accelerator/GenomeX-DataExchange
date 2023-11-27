@@ -6,8 +6,8 @@
 // **************************************************************
 
 Instance: gx1-patient-adam-anyperson
-InstanceOf: Patient
-Description: "GenomeX Example of NGS Patient"
+InstanceOf: GdxPatient
+Description: "GenomeX Example1 of NGS Patient"
 * identifier.use = #usual
 * identifier[0].type = IDTYPE#PT "Patient external identifier"
 * identifier[0].system = "https://www.laborg1.com"
@@ -27,7 +27,7 @@ Description: "GenomeX Example of NGS Patient"
 
 Instance: gx1-order-tumornormal-laborg1-inc
 InstanceOf: ServiceRequest
-Description: "GenomeX example: Order information"
+Description: "GenomeX Example1: Order information"
 * identifier[0].type = IDTYPE#FILL "Filler Identifier"
 * identifier[0].system = "https://www.laborg1.com"
 * identifier[0].value = "22howe"
@@ -39,8 +39,8 @@ Description: "GenomeX example: Order information"
 * reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
 
 Instance: gx1-organization-laborg1-inc
-InstanceOf: Organization
-Description: "GenomeX example: example organization"
+InstanceOf: GdxLabOrganization
+Description: "GenomeX Example1: example organization"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
 * name = "laborg1 Labs, Inc."
@@ -60,7 +60,7 @@ Description: "GenomeX example: example organization"
 
 Instance: gx1-organization-test-institution
 InstanceOf: Organization
-Description: "GenomeX example: example organization"
+Description: "GenomeX Example1: example organization"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
 * name = "Test Institution"
@@ -73,7 +73,7 @@ Description: "GenomeX  example: results interpreter of the NGS test."
 
 Instance: gx1-specimen-tumornormal-tumor
 InstanceOf: Specimen
-Description: "GenomeX Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
+Description: "GenomeX Example1 for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx1-patient-adam-anyperson)
 * type = SPTY#TUMOR "Tumor"
@@ -83,7 +83,7 @@ Description: "GenomeX Example for Genomic Specimen - Tumor specimen of the Tumor
 
 Instance: gx1-specimen-tumornormal-normal
 InstanceOf: Specimen
-Description: "GenomeX Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
+Description: "GenomeX Example1 for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx1-patient-adam-anyperson)
 * type = SPTY#BLD "Whole Blood"  // HL7v2 Specimen type does not handle "a normal sample" for TumorNormal
@@ -95,7 +95,7 @@ Description: "GenomeX Example for Genomic Specimen - Tumor specimen of the Tumor
 
 Instance: gx1-variant-somatic-bap1-indel
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - BAP1"
+Description: "GenomeX Example1 for Genomic Variant - BAP1"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -114,8 +114,8 @@ Description: "GenomeX Example for Genomic Variant - BAP1"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx1-diagnostic-implication-bap1
-InstanceOf: DiagnosticImplication
-Description: "GenomeX Example for functional effect (loss of function) - BAP1"
+InstanceOf: GdxDiagnosticImplication
+Description: "GenomeX Example1 for functional effect (loss of function) - BAP1"
 * status = #final "Final"
 * subject = Reference(gx1-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
@@ -124,7 +124,7 @@ Description: "GenomeX Example for functional effect (loss of function) - BAP1"
 
 Instance: gx1-variant-somatic-cdkn2a-cnv
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - CDKN2A"
+Description: "GenomeX Example1 for Genomic Variant - CDKN2A"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -138,7 +138,7 @@ Description: "GenomeX Example for Genomic Variant - CDKN2A"
 
 Instance: gx1-variant-somatic-cdkn2b-cnv
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - CDKN2B"
+Description: "GenomeX Example1 for Genomic Variant - CDKN2B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -152,7 +152,7 @@ Description: "GenomeX Example for Genomic Variant - CDKN2B"
 
 Instance: gx1-variant-somatic-kdm5d
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - KDM5D"
+Description: "GenomeX Example1 for Genomic Variant - KDM5D"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -166,7 +166,7 @@ Description: "GenomeX Example for Genomic Variant - KDM5D"
 
 Instance: gx1-variant-somatic-mtap
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - MTAP"
+Description: "GenomeX Example1 for Genomic Variant - MTAP"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -180,7 +180,7 @@ Description: "GenomeX Example for Genomic Variant - MTAP"
 
 Instance: gx1-variant-somatic-mycn
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - MYCN"
+Description: "GenomeX Example1 for Genomic Variant - MYCN"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -196,7 +196,7 @@ Description: "GenomeX Example for Genomic Variant - MYCN"
 
 Instance: gx1-variant-pertinent-negative-nras-kit-braf
 InstanceOf: GdxVariant
-Description: "GenomeX Example for the absence of a notable variant - KIT and BRAF"
+Description: "GenomeX Example1 for the absence of a notable variant - KIT and BRAF"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -212,7 +212,7 @@ Description: "GenomeX Example for the absence of a notable variant - KIT and BRA
  */
 Instance: gx1-variant-fusion-met-alk
 InstanceOf: GdxVariant
-Description: "Example for Genomic Variant gene fusion event"
+Description: "GenomeX Example1 for Genomic Variant gene fusion event"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -229,7 +229,7 @@ Description: "Example for Genomic Variant gene fusion event"
 
 Instance: gx1-variant-somatic-pof1b
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - POF1B"
+Description: "GenomeX Example1 for Genomic Variant - POF1B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -247,8 +247,8 @@ Description: "GenomeX Example for Genomic Variant - POF1B"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx1-diagnostic-implication-pof1b
-InstanceOf: DiagnosticImplication
-Description: "GenomeX Example for Clinical Significance of VUS - POF1B"
+InstanceOf: GdxDiagnosticImplication
+Description: "GenomeX Example1 for Clinical Significance of VUS - POF1B"
 * status = #final "Final"
 * subject = Reference(gx1-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
@@ -257,7 +257,7 @@ Description: "GenomeX Example for Clinical Significance of VUS - POF1B"
 
 Instance: gx1-variant-somatic-polrmt
 InstanceOf: GdxVariant
-Description: "GenomeX Example for Genomic Variant - POLRMT"
+Description: "GenomeX Example1 for Genomic Variant - POLRMT"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -275,8 +275,8 @@ Description: "GenomeX Example for Genomic Variant - POLRMT"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx1-diagnostic-implication-polrmt
-InstanceOf: DiagnosticImplication
-Description: "GenomeX Example for Clinical Significance of VUS - POF1B"
+InstanceOf: GdxDiagnosticImplication
+Description: "GenomeX Example1 for Clinical Significance of VUS - POF1B"
 * status = #final "Final"
 * subject = Reference(gx1-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
@@ -286,7 +286,7 @@ Description: "GenomeX Example for Clinical Significance of VUS - POF1B"
 // ******* Tumor Mutation Burden *********
 Instance: gx1-tmb
 InstanceOf: TMB
-Description: "Example for Tumor Mutation Burden"
+Description: "GenomeX Example1 for Tumor Mutation Burden"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -295,7 +295,7 @@ Description: "Example for Tumor Mutation Burden"
 // ******* Microsatellite Instability *********
 Instance: gx1-msi
 InstanceOf: MSI
-Description: "Example for Microsatellite Instability"
+Description: "GenomeX Example1 for Microsatellite Instability"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -304,46 +304,51 @@ Description: "Example for Microsatellite Instability"
 // ******** Therapeutic Implications *********
 
 Instance: gx1-therapeutic-implication-alectinib
-InstanceOf: TherapeuticImplication
-Description: "Example of how Genomics Reporting IG Therapeutic Implications"
+InstanceOf: GdxTherapeuticImplication
+Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implications"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
+* subject = Reference(gx1-patient-adam-anyperson)
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1727455 "alectinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 
 Instance: gx1-therapeutic-implication-brigatinib
-InstanceOf: TherapeuticImplication
-Description: "Example of how Genomics Reporting IG Therapeutic Implications"
+InstanceOf: GdxTherapeuticImplication
+Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implications"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
+* subject = Reference(gx1-patient-adam-anyperson)
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1921217 "brigatinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 
 Instance: gx1-therapeutic-implication-ceritinib
-InstanceOf: TherapeuticImplication
-Description: "Example of how Genomics Reporting IG Therapeutic Implications"
+InstanceOf: GdxTherapeuticImplication
+Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implications"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
+* subject = Reference(gx1-patient-adam-anyperson)
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1535457 "ceritinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 
 Instance: gx1-therapeutic-implication-crizotinib
-InstanceOf: TherapeuticImplication
-Description: "Example of how Genomics Reporting IG Therapeutic Implications"
+InstanceOf: GdxTherapeuticImplication
+Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implications"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
+* subject = Reference(gx1-patient-adam-anyperson)
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1148495 "crizotinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 
 Instance: gx1-therapeutic-implication-lorlatinib
-InstanceOf: TherapeuticImplication
-Description: "Example of how Genomics Reporting IG Therapeutic Implications"
+InstanceOf: GdxTherapeuticImplication
+Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implications"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
+* subject = Reference(gx1-patient-adam-anyperson)
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#2103164 "lorlatinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
@@ -352,7 +357,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications"
 // ********** Genomics Report ***********
 Instance: gx1-genomics-report-adam-anyperson
 InstanceOf: GenomicsReport
-Description: "GenomeX Example for Genomics Report"
+Description: "GenomeX Example1 for Genomics Report"
 * status = #final "Final"
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(gx1-patient-adam-anyperson)
