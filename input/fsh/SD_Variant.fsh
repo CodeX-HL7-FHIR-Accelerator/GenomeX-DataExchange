@@ -1,12 +1,11 @@
 Profile: GdxVariant
 Parent: CGVariant
 Title: "GDX Variant"
-Description: "GenomeX subset of genomic variant."
+Description: "GenomeX subset of genomic variant. Mcode"
 * subject 1..1 
 * subject only Reference(GdxPatient)
 * basedOn only Reference(ServiceRequest)
 * performer only Reference(Practitioner or PractitionerRole or Organization)
-* component[gene-studied] and component[gene-studied].code and component[gene-studied].value[x] MS
 * component[gene-studied] and component[gene-studied].code and component[gene-studied].value[x] MS
 * component[variation-code] and component[variation-code].code and component[variation-code].value[x] MS
 * component[genomic-hgvs] and component[genomic-hgvs].code and component[genomic-hgvs].value[x] MS
