@@ -11,6 +11,7 @@ This FHIR implementation guide (IG) is intended to organize modeling guidance fo
 ### Scope
 
 This first draft will focus on the following:
+* Genomics Reporting FHIR IG 2.0.0
 * a basic set of data elements usable by providers for diagnosis, treatment, and monitoring
 * somatic tests
 * oncology-related GRIG profiles - Tumor mutation burden (TMB) and microsatellite instability (MSI)
@@ -43,7 +44,6 @@ TO DO: Insert diagram.
 
 <object data="gdx_profiles.svg" type="image/svg+xml"></object>
 <br/>
-
 
 #### Genomic data transport
 

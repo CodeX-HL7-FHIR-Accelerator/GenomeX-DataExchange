@@ -45,16 +45,16 @@ Description: "GenomeX Example1: example organization"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
 * name = "laborg1 Labs, Inc."
 * identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"
-* identifier[0].value = "14D2114007"
+* identifier[0].value = "453131235"
 * telecom[0].system = #phone
 * telecom[0].value = "999-999-9999"
 * telecom[1].system = #email
 * telecom[1].value = "support@laborg1.com"
 * telecom.use = #work
-* address.line = "600 West Chicago Avenue, Ste 510"
-* address.city = "Chicago"
-* address.state = "IL"
-* address.postalCode = "60654"
+* address.line = "987 Main Avenue, Ste 200"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
 * address.country = "US"
 * contact.name.text = "Nike Beaubier, MD, FCAP, MGP"
 
