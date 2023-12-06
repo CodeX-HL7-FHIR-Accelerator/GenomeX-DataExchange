@@ -4,7 +4,7 @@ Profile: GdxPatient
 Parent: Patient
 Id: gdx-patient
 Title: "GDX Patient"
-Description: "The patient noted in a genetic/genomic report."
+Description: "The patient who has been diagnosed with or is receiving medical treatment for maligant growth or tumor. The patient is addressed  in a genetic/genomic report." 
 * identifier 1..* MS
 * birthDate MS
 * gender MS
