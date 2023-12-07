@@ -4,7 +4,7 @@ Profile: GdxPatient
 Parent: Patient
 Id: gdx-patient
 Title: "GDX Patient"
-Description: "The patient noted in a genetic/genomic report."
+Description: "The person who is the subject of the genetic/genomic report." 
 * identifier 1..* MS
 * birthDate MS
 * gender MS
