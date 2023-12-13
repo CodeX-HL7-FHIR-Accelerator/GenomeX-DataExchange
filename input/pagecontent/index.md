@@ -48,7 +48,8 @@ TO DO: Insert diagram.
 #### Genomic data transport
 
 The sequence diagram is shown below:
-**Insert Transport diagram containing HL7v2 with reference pointer**
+<object data="genomeX_transport.svg" type="image/svg+xml"></object>
+<br/>
 ### Credits
 
 Our thanks to the contributors to the CodeX/GenomeX data exchange workstream which drive the guidance in this IG:
