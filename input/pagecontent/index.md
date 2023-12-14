@@ -49,6 +49,19 @@ TO DO: Insert diagram.
 
 The sequence diagram is shown below:
 **Insert Transport diagram containing HL7v2 with reference pointer**
+
+### Dependencies
+  <p>{% include dependency-table.xhtml %} </p>
+
+### Global Profiles
+  <p>{% include globals-table.xhtml %} </p>
+
+### Cross Version Analysis
+  <p>{% include cross-version-analysis.xhtml %} </p>
+
+### IP Statements
+  <p>{% include ip-statements.xhtml %} </p>
+
 ### Credits
 
 Our thanks to the contributors to the CodeX/GenomeX data exchange workstream which drive the guidance in this IG:
