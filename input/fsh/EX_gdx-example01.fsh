@@ -10,7 +10,7 @@ InstanceOf: GdxPatient
 Description: "GenomeX Example1 of NGS Patient"
 * identifier.use = #usual
 * identifier[0].type = IDTYPE#PT "Patient external identifier"
-* identifier[0].system = "https://www.laborg1.com"
+* identifier[0].system = "https://www.example.org/laborg1"
 * identifier[0].value = "22ea1d1b-03a5-47d6-81e0-b9b4cbb15ccf"
 * identifier[1].type = IDTYPE#MR "Medical Record Number"
 * identifier[1].system = "http://hospital.example.org"
@@ -26,7 +26,7 @@ Description: "GenomeX Example1 of NGS Patient"
 
 
 Instance: gx1-order-tumornormal-laborg1-inc
-InstanceOf: ServiceRequest
+InstanceOf: GdxServiceRequest
 Description: "GenomeX Example1: Order information"
 * identifier[0].type = IDTYPE#FILL "Filler Identifier"
 * identifier[0].system = "https://www.laborg1.com"
@@ -72,7 +72,7 @@ Description: "GenomeX  example: results interpreter of the NGS test."
 * name.text = "Test Pathologist, MD"
 
 Instance: gx1-specimen-tumornormal-tumor
-InstanceOf: Specimen
+InstanceOf: GdxSpecimen
 Description: "GenomeX Example1 for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -82,7 +82,7 @@ Description: "GenomeX Example1 for Genomic Specimen - Tumor specimen of the Tumo
 * collection.collectedDateTime = "2021-02-06T17:15:00+05:00"
 
 Instance: gx1-specimen-tumornormal-normal
-InstanceOf: Specimen
+InstanceOf: GdxSpecimen
 Description: "GenomeX Example1 for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx1-patient-adam-anyperson)
@@ -101,7 +101,8 @@ Description: "GenomeX Example1 for Genomic Variant - BAP1"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 // * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx1-patient-adam-anyperson)
-// * effectiveDateTime = "2019-04-01"
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:950 "BAP1"
 * component[gene-studied].valueCodeableConcept.coding[1] = ENTREZ#3815 "BAP1"
@@ -118,6 +119,7 @@ InstanceOf: GdxDiagnosticImplication
 Description: "GenomeX Example1 for functional effect (loss of function) - BAP1"
 * status = #final "Final"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-somatic-bap1-indel)
 * component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
@@ -128,6 +130,7 @@ Description: "GenomeX Example1 for Genomic Variant - CDKN2A"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:1787 "CDKN2A"
@@ -142,6 +145,7 @@ Description: "GenomeX Example1 for Genomic Variant - CDKN2B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:1788 "CDKN2B"
@@ -156,6 +160,7 @@ Description: "GenomeX Example1 for Genomic Variant - KDM5D"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:11115 "KDM5D"
@@ -170,6 +175,7 @@ Description: "GenomeX Example1 for Genomic Variant - MTAP"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:7413 "MTAP"
@@ -184,6 +190,7 @@ Description: "GenomeX Example1 for Genomic Variant - MYCN"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:7559 "MYCN"
@@ -200,6 +207,7 @@ Description: "GenomeX Example1 for the absence of a notable variant - KIT and BR
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9634-2 "Absent"
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
@@ -216,6 +224,7 @@ Description: "GenomeX Example1 for Genomic Variant gene fusion event"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied][0].valueCodeableConcept.coding[0] = HGNC#HGNC:7029 "MET" 
@@ -233,6 +242,7 @@ Description: "GenomeX Example1 for Genomic Variant - POF1B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:13711 "POF1B"
@@ -251,6 +261,7 @@ InstanceOf: GdxDiagnosticImplication
 Description: "GenomeX Example1 for Clinical Significance of VUS - POF1B"
 * status = #final "Final"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-somatic-pof1b)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
@@ -261,6 +272,7 @@ Description: "GenomeX Example1 for Genomic Variant - POLRMT"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:9200 "POLRMT"
@@ -279,6 +291,7 @@ InstanceOf: GdxDiagnosticImplication
 Description: "GenomeX Example1 for Clinical Significance of VUS - POF1B"
 * status = #final "Final"
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-somatic-polrmt)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
@@ -290,6 +303,8 @@ Description: "GenomeX Example1 for Tumor Mutation Burden"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * valueQuantity.value = 57.1
 
 // ******* Microsatellite Instability *********
@@ -299,6 +314,8 @@ Description: "GenomeX Example1 for Microsatellite Instability"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA26203-2 "MSI-H"
 
 // ******** Therapeutic Implications *********
@@ -309,6 +326,8 @@ Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implicat
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1727455 "alectinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
@@ -319,6 +338,8 @@ Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implicat
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1921217 "brigatinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
@@ -329,6 +350,8 @@ Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implicat
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1535457 "ceritinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
@@ -339,6 +362,8 @@ Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implicat
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1148495 "crizotinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
@@ -349,6 +374,8 @@ Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implicat
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
 * subject = Reference(gx1-patient-adam-anyperson)
+* performer = Reference(gx1-practitioner-test-pathologist)
+* effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx1-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#2103164 "lorlatinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
@@ -356,7 +383,7 @@ Description: "GenomeX Example1 of how Genomics Reporting IG Therapeutic Implicat
 
 // ********** Genomics Report ***********
 Instance: gx1-genomics-report-adam-anyperson
-InstanceOf: GenomicsReport
+InstanceOf: GdxGenomicsReport
 Description: "GenomeX Example1 for Genomics Report"
 * status = #final "Final"
 * code = LNC#51969-4 "Genetic analysis report"
