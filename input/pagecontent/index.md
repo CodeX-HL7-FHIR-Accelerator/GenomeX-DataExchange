@@ -45,11 +45,12 @@ TO DO: Insert diagram.
 <object data="gdx_profiles.svg" type="image/svg+xml"></object>
 <br/>
 
-#### Genomic data transport
+#### Genomic Data Transport
 
 The sequence diagram is shown below:
 <object data="genomeX_transport.svg" type="image/svg+xml"></object>
 <br/>
+Details for Genomics Data Transport are described [here]
 ### Credits
 
 Our thanks to the contributors to the CodeX/GenomeX data exchange workstream which drive the guidance in this IG:
@@ -70,3 +71,8 @@ Our thanks to the contributors to the CodeX/GenomeX data exchange workstream whi
 * Vasil Petyev - Epic
 * Brian Reuter - Tempus
 * May Terry - MITRE
+
+<!-- LINKS -->
+
+[here]:
+pagecontent/transport.md
