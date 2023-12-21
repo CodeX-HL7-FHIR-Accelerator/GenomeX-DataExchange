@@ -1,32 +1,34 @@
-## GenomeX data transport
+## GenomeX data transport for genomic lab orders and results.
 
-Precision Medicine workflows require sharing complex data types with many relationships.
-Multiple transmission formats and protocols are used to transport Genomic test results from laboratories to health care organizations.
-HL7v2 transmission, using the MLLP protocol, is ubiquitously adopted as a result of healthcare law and remains the only guaranteed transport 
-available to support data exchange for Clinical Workflows, especially Lab Orders & Results.
+  This GenomeX IG describes FHIR resources for genomic test results with the goal of enabling precision medicine workflows.  However, the FHIR resource content described in this IG only describes the *results* from genomic lab.  Integration of order placement is also required to scale genomic lab testing.
+ 
+ This supplemental content is intended to frame the transport options when blending HL7v2 ordering with FHIR results to complete the request/reply exchange between order placers (HCO/EHR) and order fillers (Lab).  This options presented here assume HL7v2 ORM/ORU message exchange is a baseline capability offered by most EHR vendors and Labs.
 
-FHIR GenomeX data structures will be transmitted to enable new precision medicine workflows. In the prescribed options EHR integrations w/ Labs 
-will continue to support HL7v2 Ordering along with new HTTP based transport options as listed below:
+This supplemental content guide intent is to describe an HL7v2 to FHIR transition architecture.  For a pure FHIR API approach to ordering, see [TODO: Which Ordering IG?]
 
-1. HL7v2 Order & Result via embedded FHIR bundle as base 64 string
-2. HL7v2 Order & Result via FHIR APIs links: HL7 ORU contains FHIR server link to download the reports through HTTPs.
-3. HL7v2 Order & Result via FHIR API polling (batch download)
+### 
 
-### 1. HL7 ORU with embedded FHIR bundle as base 64 string
+The content presented under each scenario header below will describe the data and transport relationships between the HL7 ORM/ORU messages and the GenomeX FHIR bundle.
+
+1. Order via HL7v2 ORM & GenomeX FHIR bundle base64 encoded via HL7v2 ORU
+2. Order via HL7v2 ORM & GenomeX FHIR bundle download via FHIR API URL the HL7v2 ORU
+3. Order via HL7v2 ORM & GenomeX FHIR bundle download via FHIR API polling
+
+### 1. Order via HL7v2 ORM & GenomeX FHIR bundle base64 encoded in HL7v2 ORU
 
 Steps:
 * EHR system places a new order through ORM HL7 into lab  
-* Lab sends Observation (ORU) with a FHIR bundle as base 64 string embedded in
+* Lab sends Observation Result (ORU) with a FHIR bundle as base64 string embedded in
 OBX segment
 
 <object data="genomeX_transport_option_1.svg" type="image/svg+xml"></object>
 <br/>
 
-### 2. Hybrid HL7 ORU and FHIR APIs
+### 2. Order via HL7v2 ORM & GenomeX FHIR bundle download via FHIR API URL the HL7v2 ORU
 
 Steps:
 * EHR system places a new order through ORM HL7 into lab  
-* Lab sends Observation (ORU) with an HTTP link to FHIR server in OBX segment
+* Lab sends Observation Result (ORU) with an HTTP link to FHIR server in OBX segment
 * EHR receives HL7 and issues a HTTPs GET request to the FHIR server for the report
 * FHIR server returns a report as an HTTPs response
 
@@ -36,7 +38,7 @@ Steps:
 <object data="gdx_profiles.svg" type="image/svg+xml"></object>
 <br/>
 
-### 3. EHR initiates HL7 Order; Research platform polls FHIR server for report download
+### 3. Order via HL7v2 ORM & GenomeX FHIR bundle download via FHIR API polling
 
 Steps:
 * EHR system places a new order through ORM HL7 into lab  
