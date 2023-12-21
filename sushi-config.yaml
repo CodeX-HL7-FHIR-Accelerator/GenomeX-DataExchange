@@ -77,6 +77,8 @@ parameters:
 menu:
   Home: index.html
   Artifacts: artifacts.html
+  Guidance:
+    Transport: transport.html
   Examples:
     Extended Example: example_extended.html
 
