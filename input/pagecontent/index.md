@@ -47,6 +47,24 @@ TO DO: Insert diagram.
 
 #### Genomic Data Transport
 
+The sequence diagram is shown below:
+
+<object data="genomeX_transport.svg" type="image/svg+xml"></object>
+<br/>
+Details for Genomics Data Transport are described [here]
+
+### Dependencies
+  <p>{% include dependency-table.xhtml %} </p>
+
+### Global Profiles
+  <p>{% include globals-table.xhtml %} </p>
+
+### Cross Version Analysis
+  <p>{% include cross-version-analysis.xhtml %} </p>
+
+### IP Statements
+  <p>{% include ip-statements.xhtml %} </p>
+
 Details for Transport are described in [Transport Messaging](transport.html)
 ### Credits
 
