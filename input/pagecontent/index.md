@@ -47,11 +47,7 @@ TO DO: Insert diagram.
 
 #### Genomic Data Transport
 
-The sequence diagram is shown below:
-
-<object data="genomeX_transport.svg" type="image/svg+xml"></object>
-<br/>
-Details for Genomics Data Transport are described [here]
+Details for Transport are described in [Transport Messaging](transport.html)
 
 ### Dependencies
   <p>{% include dependency-table.xhtml %} </p>
@@ -65,7 +61,6 @@ Details for Genomics Data Transport are described [here]
 ### IP Statements
   <p>{% include ip-statements.xhtml %} </p>
 
-Details for Transport are described in [Transport Messaging](transport.html)
 ### Credits
 
 Our thanks to the contributors to the CodeX/GenomeX data exchange workstream which drive the guidance in this IG:
