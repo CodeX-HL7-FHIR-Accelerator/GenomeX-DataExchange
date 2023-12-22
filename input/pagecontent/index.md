@@ -45,10 +45,9 @@ TO DO: Insert diagram.
 <object data="gdx_profiles.svg" type="image/svg+xml"></object>
 <br/>
 
-#### Genomic data transport
+#### Genomic Data Transport
 
-The sequence diagram is shown below:
-**Insert Transport diagram containing HL7v2 with reference pointer**
+Details for Transport are described in [Transport Messaging](transport.html)
 
 ### Dependencies
   <p>{% include dependency-table.xhtml %} </p>
@@ -81,4 +80,6 @@ Our thanks to the contributors to the CodeX/GenomeX data exchange workstream whi
 * James Patterson - MITRE
 * Vasil Petyev - Epic
 * Brian Reuter - Tempus
+* Rahul Singh - Tempus
+* Kinson Ho - Tempus
 * May Terry - MITRE
