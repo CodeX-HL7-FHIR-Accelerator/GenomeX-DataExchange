@@ -36,14 +36,11 @@ The GDX effort has two tracks of activities:
 The payload sub-group focuses on the content of the genomic report.
 The transport group focuses on the messaging protocol established among sending and receiving systems, and which carries the genomic report content, as specified from the payload sub-group.
 
-### Conceptual Diagrams
-
-TO DO: Insert diagram.
-
-#### Genomic Payload
-
-<object data="gdx_profiles.svg" type="image/svg+xml"></object>
 <br/>
+
+#### Genomic Data Payload
+
+Details for scope of content in the genomics report are described in [Payload](payload.html)
 
 #### Genomic Data Transport
 
@@ -63,23 +60,4 @@ Details for Transport are described in [Transport Messaging](transport.html)
 
 ### Credits
 
-Our thanks to the contributors to the CodeX/GenomeX data exchange workstream which drive the guidance in this IG:
-
-* Ellen Anderson - Evernorth
-* Howard Anton - Tempus
-* Dennis Blair - Evicore
-* Beverly Buckta - Pfizer
-* Srikar Chamala, Ph.D. - Childrens Hospital of Los Angeles
-* Willie Chang - Epic
-* James Chen, MD - Tempus
-* Arthur Herman - Kaiser Permanente
-* Scott Isaac - Epic
-* Charles Keenan - Phenotips
-* Spenser Klebben - Foundation Medicine
-* Vitalia Muzyka - Foundation Medicine
-* James Patterson - MITRE
-* Vasil Petyev - Epic
-* Brian Reuter - Tempus
-* Rahul Singh - Tempus
-* Kinson Ho - Tempus
-* May Terry - MITRE
+Our thanks to the contributors to the CodeX/GenomeX data exchange work stream which drive the guidance in this IG.
