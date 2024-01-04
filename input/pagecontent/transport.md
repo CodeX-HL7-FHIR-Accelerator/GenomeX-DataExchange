@@ -21,14 +21,20 @@ Steps:
 * Lab sends Observation Result (ORU) with a FHIR bundle as base64 string embedded in
 an OBX segment
 
-<object data="genomeX_transport_option_1.svg" type="image/svg+xml"></object>
-<br/>
+<div>
+<img src="genomeX_transport_option_1.svg" width="70%">
+</div>
 
 HL7V2 ORU would contain report bundle as a base64 string in the OBX segment
 - OBX-2 =  ED (Encapsulated Data)
 - OBX-5 =  Base 64 string
 
-<object data="HL7_RP_ORU.svg" type="image/svg+xml"></object>
+<div class="example">
+MSH|^~\&|<span style="color:red;">&lt;Sending Application&gt;</span>|<span style="color:red;">&lt;Sending Facility&gt;</span>|<span style="color:red;">&lt;Receiving Application&gt;</span>|<span style="color:red;">&lt;Receiving Facility&gt;</span>|20240104093000||ORU^R01|12345678910|T|2.5.1<br>
+PID|1||123456789||Last^First||19450912|M|||123 Fake St.^^Chicago^IL^60614<br>
+OBR|1|12345678|24abcdef|GTEST^Sample Test1|||20240101|||||||||0123456789^TEST^CLINICIAN^^^^^^^^^^NPI<br>
+OBX|1|<span style="color:red;">ED</span>|<span style="color:red;">GENOMEXBUNDLE^Genome X Bundle^TMPLRR</span>||<span style="color:red;">^^PDF^Base64^&lt;Base64 GenomeX bundle&gt;</span>|
+</div>
 
 ### Order via HL7v2 ORM & GenomeX FHIR bundle download via FHIR API URL the HL7v2 ORU
 
@@ -39,16 +45,21 @@ Steps:
 * EHR receives HL7 and issues a HTTPs GET request to the FHIR server for the report
 * FHIR server returns a report as an HTTPs response
 
-
-<object data="genomeX_transport_option_2.svg" type="image/svg+xml"></object>
-<br/>
+<div>
+<img src="genomeX_transport_option_2.svg" width="70%">
+</div>
 
 HL7V2 ORU will contain a Reference pointer to FHIR source.
 - OBX-2 =  RP (reference pointer)
 - OBX-5 URL to FHIR resource
   Additionally, LOINC code 81247-9^Master HL7 genetic variant reporting panel^LN should be used. As shown in example below
 
-<object data="HL7_ED_ORU.svg" type="image/svg+xml"></object>
+<div class="example">
+MSH|^~\&|<span style="color:red;">&lt;Sending Application&gt;</span>|<span style="color:red;">&lt;Sending Facility&gt;</span>|<span style="color:red;">&lt;Receiving Application&gt;</span>|<span style="color:red;">&lt;Receiving Facility&gt;</span>|20240104093000||ORU^R01|12345678910|T|2.5.1<br>
+PID|1||123456789||Last^First||19450912|M|||123 Fake St.^^Chicago^IL^60614<br>
+OBR|1|12345678|24abcdef|GTEST^Sample Test1|||20240101|||||||||0123456789^TEST^CLINICIAN^^^^^^^^^^NPI<br>
+OBX|1|<span style="color:red;">RP</span>|<span style="color:red;">81247-9^Master HL7 genetic variant reporting panel^LN</span>||<span style="color:red;">&lt;FHIR Server HTTPS URL&gt;</span>|||||F
+</div>
 
 ### Order via HL7v2 ORM & GenomeX FHIR bundle download via FHIR API polling
 
@@ -59,7 +70,8 @@ using search parameters in the FHIR servers search endpoint
 * EHR issues a HTTP GET request to the FHIR server for the report/bundle
 * Lab FHIR server returns GenomeX report/bundle as a HTTP response
 
-<object data="genomeX_transport_option_3.svg" type="image/svg+xml"></object>
-<br/>
+<div>
+<img src="genomeX_transport_option_3.svg" width="70%">
+</div>
 
 #### FHIR servers are recommended to adopt [Smart on FHIR](https://build.fhir.org/ig/HL7/smart-app-launch/client-confidential-asymmetric.html#client-authentication-asymmetric-public-key) with asymmetric key profile. SMART on FHIR is an HL7 standard widely supported in healthcare.
