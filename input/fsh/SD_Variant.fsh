@@ -1,7 +1,7 @@
 Profile: GdxVariant
 Parent: CGVariant
 Title: "GDX Variant"
-Description: "GenomeX subset of genomic variant. Mcode"
+Description: "GenomeX subset of variant profile."
 * subject 1..1 
 * subject only Reference(GdxPatient)
 * basedOn only Reference(GdxServiceRequest)
