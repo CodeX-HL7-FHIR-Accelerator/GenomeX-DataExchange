@@ -23,7 +23,7 @@ For additional context, samples for a variety of report types, such as general g
 The major outcomes of the payload development process are represented by the constraints on the FHIR resources in this IG and shown in the profiles. In addition, there are other design decisions that are shown below to help guide the Data Exchange community through early implementation of FHIR in their workflows. 
 
 #### Decision: Bundle types
-There are a number of options for the FHIR bundle type that may be used to deliver the genomic test results. The intention is to provide options to the report producers as they increase their FHIR capabilities. The decision of how to generate the FHIR bundle must take into consideration the [transport mechanism](transport.md) used. 
+There are a number of options for the FHIR bundle type that may be used to deliver the genomic test results. The intention is to provide options to the report producers as they increase their FHIR capabilities. The decision of how to generate the FHIR bundle must take into consideration the [transport mechanism](transport.html) used. 
 
 The two options will include:
 1. an embedded FHIR bundle in the HL7v2 message
