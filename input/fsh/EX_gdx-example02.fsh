@@ -5,39 +5,26 @@
 // **************************************************************
 // ************* Example 2: Tumor-Normal Test *******************
 // **************************************************************
-
-Instance: gx2-patient-substance-hamsburg
+Instance: gx2-patient-srikar-chamala
 InstanceOf: GdxPatient
 Description: "GenomeX Example2 of NGS Patient"
 * identifier.use = #usual
-// * identifier[0].type = IDTYPE#PT "Patient external identifier"
-// * identifier[0].system = "https://www.example.org/laborg1"
-// * identifier[0].value = "22ea1d1b-03a5-47d6-81e0-b9b4cbb15ccf"
-// * identifier[1].type = IDTYPE#MR "Medical Record Number"
-// * identifier[1].system = "http://hospital.example.org"
-// * identifier[1].value = "123456789"
-* name.family = "Hamsburg"
-* name.given[0] = "Substance Jr"
+* name.family = "Chamala"
+* name.given[0] = "Srikar Jr"
 * gender = #male
 * birthDate = "1987-09-01"
-// * address.line = "987 Main St"
-// * address.city = "Anytown"
-// * address.postalCode = "12345"
-// * address.country = "US"
 
 
 Instance: gx2-order-tumornormal-laborg1-inc
 InstanceOf: GdxServiceRequest
 Description: "GenomeX Example2: Order information"
-
 * identifier[0].type = IDTYPE#FILL "Filler Identifier"
 * identifier[0].system = "https://www.mytestpathlab.com"
 * identifier[0].value = "1001"
 * status = #completed
 * intent = #order
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * code = https://www.mytestpathlab.com#XT.V4 "My Test Cancer 700 Gene Panel"
-// * code.text = "My Test Cancer 700 Gene Panel"
 
 * reasonCode[0].coding[0] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
 
@@ -50,11 +37,6 @@ Description: "GenomeX Example2: example organization"
 * name = "My Test Pathology Laboratories"
 * identifier[0].system = "http://www.somesystemabc.net/identifiers/CLIA"
 * identifier[0].value = "10000DLAB8"
-// * telecom[0].system = #phone
-// * telecom[0].value = "100-200-3000"
-// * telecom[1].system = #email
-// * telecom[1].value = "support@laborg1.com"
-//* telecom.use = #work
 * address.line = "1000 SE Lab Ave"
 * address.city = "Los Angeles"
 * address.state = "CA"
@@ -65,7 +47,7 @@ Description: "GenomeX Example2: example organization"
 Instance: gx2-practitioner-test-pathologist
 InstanceOf: Practitioner
 Description: "GenomeX  example: results interpreter of the NGS test."
-* name.text = "Test Jr Chamala, MD"
+* name.text = "Test Jr Dolin, MD"
 * active = true
 
 Instance: gx2-specimen-tumornormal-tumor
@@ -74,7 +56,7 @@ Description: "GenomeX Example2 for Genomic Specimen - Tumor specimen of the Tumo
 * identifier.system = "http://www.somesystemabc.net/identifiers/specimens"
 * identifier.value = "222333"
 * status = #available "Available"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * receivedTime = "2023-01-23T01:30:50+05:00"
 * collection.bodySite = SCT#3341006 "Right lung structure (body structure)"
 * collection.collectedDateTime = "2023-01-01T01:15:00+05:00"
@@ -85,7 +67,7 @@ Description: "GenomeX Example2 for Genomic Specimen - Tumor specimen of the Tumo
 * identifier.system = "http://www.somesystemabc.net/identifiers/specimens"
 * identifier.value = "444555"
 * status = #available "Available"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * type = SPTY#BLD "Whole Blood"  // HL7v2 Specimen type does not handle "a normal sample" for TumorNormal
 * receivedTime = "2023-01-23T01:30:50+05:00"
 * collection.collectedDateTime = "2023-01-01T01:15:00+05:00"
@@ -99,7 +81,7 @@ InstanceOf: GdxVariant
 Description: "GenomeX Example2 for Genomic Variant - EGFR L858R"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -119,7 +101,7 @@ Instance: gx2-diagnostic-implication-EFGR-L858R
 InstanceOf: GdxDiagnosticImplication
 Description: "GenomeX Example2 for Clinical Significance of Pathogenic - EGFR L858R"
 * status = #final "Final"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * derivedFrom = Reference(gx2-variant-somatic-EGFR-L858R)
@@ -135,7 +117,7 @@ InstanceOf: GdxVariant
 Description: "GenomeX Example2 for Genomic Variant - STAG2"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -153,7 +135,7 @@ Instance: gx2-diagnostic-implication-STAG2
 InstanceOf: GdxDiagnosticImplication
 Description: "GenomeX Example2 for Clinical Significance of Pathogenic - STAG2"
 * status = #final "Final"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * derivedFrom = Reference(gx2-variant-somatic-STAG2)
@@ -168,7 +150,7 @@ InstanceOf: GdxVariant
 Description: "GenomeX Example2 for Genomic Variant - NTHL1"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -187,7 +169,7 @@ Instance: gx2-diagnostic-implication-NTHL1
 InstanceOf: GdxDiagnosticImplication
 Description: "GenomeX Example2 for Clinical Significance of Pathogenic - NTHL1"
 * status = #final "Final"
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * derivedFrom = Reference(gx2-variant-somatic-NTHL1)
@@ -203,7 +185,7 @@ InstanceOf: TMB
 Description: "GenomeX Example1 for Tumor Mutation Burden"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * code = LNC#94076-7 "Mutations/Megabase [# Ratio] in Tumor"
@@ -212,13 +194,12 @@ Description: "GenomeX Example1 for Tumor Mutation Burden"
 // ***************************************************************
 // ******* Microsatellite Instability *********
 // ***************************************************************
-
 Instance: gx2-msi
 InstanceOf: MSI
 Description: "GenomeX Example1 for Microsatellite Instability"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * code = LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
@@ -227,13 +208,12 @@ Description: "GenomeX Example1 for Microsatellite Instability"
 // ***************************************************************
 // ******** Therapeutic Implications *********
 // ***************************************************************
-
 Instance: gx2-therapeutic-implication-Gefitinib
 InstanceOf: GdxTherapeuticImplication
 Description: "GenomeX Example2 of how Genomics Reporting IG Therapeutic Implications"
 * status = #final "Final"
 * category[labCategory] = ObsCat#laboratory
-* subject = Reference(gx2-patient-substance-hamsburg)
+* subject = Reference(gx2-patient-srikar-chamala)
 * performer = Reference(gx2-practitioner-test-pathologist)
 * effectiveDateTime = "2023-02-02"
 * derivedFrom = Reference(gx2-variant-somatic-EGFR-L858R)
@@ -241,4 +221,28 @@ Description: "GenomeX Example2 of how Genomics Reporting IG Therapeutic Implicat
 // ******** Clinical Trials *********
 * component[therapy-assessed].valueCodeableConcept = NCTTRIAL#NCT04919811 "NCT04919811"
 
+// ********** Genomics Report ***********
+Instance: gx2-genomics-report-srikar-chamala 
+InstanceOf: GdxGenomicsReport
+Description: "GenomeX Example1 for Genomics Report"
+* status = #final "Final"
+* code = LNC#51969-4 "Genetic analysis report"
+* subject = Reference(gx2-patient-srikar-chamala)
+* performer = Reference(gx2-organization-laborg1-inc)
+* effectiveDateTime = "2022-02-02T19:28:58+05:00"
+* basedOn = Reference(gx2-order-tumornormal-laborg1-inc)
+* resultsInterpreter = Reference(gx2-practitioner-test-pathologist)
+* specimen[0] = Reference(Specimen/gx2-specimen-tumornormal-tumor)
+* specimen[1] = Reference(Specimen/gx2-specimen-tumornormal-normal)
+* result[0] = Reference(Observation/gx2-variant-somatic-EGFR-L858R)
+* result[1] = Reference(Observation/gx2-variant-somatic-STAG2)
+* result[+] = Reference(Observation/gx2-variant-somatic-NTHL1)
 
+* result[+] = Reference(Observation/gx2-diagnostic-implication-EFGR-L858R)
+* result[+] = Reference(Observation/gx2-diagnostic-implication-STAG2)
+* result[+] = Reference(Observation/gx2-diagnostic-implication-NTHL1)
+* result[+] = Reference(Observation/gx2-tmb)
+* result[+] = Reference(Observation/gx2-msi)
+* result[+] = Reference(Observation/gx2-therapeutic-implication-Gefitinib)
+
+// * presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"  // removed the PDF attachment at the request of the lab vendor
