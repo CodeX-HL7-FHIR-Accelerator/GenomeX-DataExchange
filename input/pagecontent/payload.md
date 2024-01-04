@@ -17,7 +17,7 @@ Once the data elements were catalogued, the members mapped them to an appropriat
 
 These data elements were the focus of Phase 0 and will represent a starting point for this IG. 
 
-For additional context, samples for a variety of report types, such as general genomic reporting, somatic reporting, variant reporting, and PGx reporting are available under the [How to Use This Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/#how-to-use-this-guide) section of the [Genomics Reporting IG (STU2)](http://hl7.org/fhir/uv/genomics-reporting/STU2).
+For additional context, samples for a variety of report types, such as general genomic reporting, somatic reporting, variant reporting, and PGx reporting are available under the [How to Use This Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html#how-to-use-this-guide) section of the [Genomics Reporting IG (STU2)](http://hl7.org/fhir/uv/genomics-reporting/STU2).
 
 ### Outcomes 
 The major outcomes of the payload development process are represented by the constraints on the FHIR resources in this IG and shown in the profiles. In addition, there are other design decisions that are shown below to help guide the Data Exchange community through early implementation of FHIR in their workflows. 
