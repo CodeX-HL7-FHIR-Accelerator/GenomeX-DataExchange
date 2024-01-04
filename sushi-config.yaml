@@ -81,6 +81,7 @@ menu:
   Artifacts: artifacts.html
   Guidance:
     Transport: transport.html
+    Payload: payload.html
   Examples:
     Extended Example: example_extended.html
 
