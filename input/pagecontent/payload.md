@@ -88,19 +88,8 @@ The following three values provide an example:
 ```
 
 ### Implementation / Validation Venues
-The decisions and consensus reached by the Data Exchange community through the process described below have been tested and validated during multiple connectathons, specifically May 2023 and January 2024. The efforts have evolved from the early work considering a broad swath of reference lab data elements to a much narrower set that were found to have consensus between multiple labs. 
+The decisions and consensus reached by the GenomeX Data Exchange community through the described process have been extensively tested and validated at HL7 FHIR Connectathons, including the May 2023 Clinical Genomics track (Connectathon 33) and the January 2024 Clinical Genomics - CodeX (GenomeX) track (Connectathon 35). Please refer to the following links for detailed information:
 
-The explicit goals of the January connectathon included:
-- Generate genomics report FHIR examples that successfully validate against FHIR validation tools.
-- Parse the following FHIR resources:
-	- GenomicsReport
-	- Variant
-	- DiagnosticImplications*
-	- TherapeuticImplications*
-	- Core FHIR resources: Patient, Specimen, PractitionerRole, Organization, ServiceRequest
-\* stretch goals
+- [HL7 FHIR Connectathon 33 Clinical Genomics - May 2023](https://confluence.hl7.org/display/FHIR/2023+-+05+Clinical+Genomics)
+- [HL7 FHIR Connectathon 35 Clinical Genomics - CodeX (GenomeX) - January 2024](https://confluence.hl7.org/pages/viewpage.action?pageId=204279063)
 
-For dynamic FHIR services, the following goals are included:
-- Generate genomics report FHIR examples that maintain referential integrity in their posted genomic report.
-- Ability to query the necessary and relevant resources referenced by the genomics report.
-- Reference implementation FHIR servers are able to support the necessary search parameters to return reference FHIR resources.
