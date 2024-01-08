@@ -36,6 +36,8 @@ The GDX effort has two tracks of activities:
 The payload sub-group focuses on the content of the genomic report.
 The transport group focuses on the messaging protocol established among sending and receiving systems, and which carries the genomic report content, as specified from the payload sub-group.
 
+More specific details regarding the structure of the use case and the sub-groups can be found on the [Overview page](overview.html). 
+
 <br/>
 
 #### Genomic Data Payload
