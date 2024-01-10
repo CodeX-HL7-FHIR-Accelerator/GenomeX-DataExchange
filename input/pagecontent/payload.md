@@ -28,7 +28,7 @@ There are a number of options for the FHIR bundle type that may be used to deliv
 The two options will include:
 1. an embedded FHIR bundle in the HL7v2 message
 2. utilizing the HL7v2 OBX-5.1 Reference Pointer (RP)
-	- The RP may reference a full contained report in a transaction bundle 
+	- The RP may reference a full contained report in a collection bundle 
 	- The RP may reference a long query for a dynamic searchset
 
 The RP value contains a pointer to the data e.g., a URL of an FHIR genomic test result. The receiving system can use this reference pointer whenever it needs access to the actual data through other interface standards.
@@ -41,10 +41,10 @@ The RP value contains a pointer to the data e.g., a URL of an FHIR genomic test 
 
 The recommended path to enable a smooth transition involves multiple steps to bridge from HL7v2 only ordering and resulting systems to a fully FHIR-ized system. To that end, these recommendations are provided:
 - Continue to embed the final PDF test report in the HL7v2 message
-- Begin to embed a test result FHIR transaction bundle in the HL7v2 message (option 1)
+- Begin to embed a test result FHIR collection bundle in the HL7v2 message (option 1)
 	- Option to embed the final PDF test report in FHIR bundle to validate full system operation prior to moving off HL7v2 transport 
 - Introduce the FHIR RP once FHIR servers are exposed for the lab and ordering organization (option 2) 
-	- RP to a FHIR transaction bundle 
+	- RP to a FHIR collection bundle 
 	- RP to a FHIR searchset
 
 #### Decision: CodeableCocept Usage Pattern
