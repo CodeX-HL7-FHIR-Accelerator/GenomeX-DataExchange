@@ -9,7 +9,7 @@ Instance: gx2-patient-john-doe
 InstanceOf: GdxPatient
 Description: "GenomeX Example2 of NGS Patient"
 * identifier.use = #usual
-* name.family = "Chamala"
+* name.family = "Doe"
 * name.given[0] = "john-doe Jr"
 * gender = #male
 * birthDate = "1987-09-01"
