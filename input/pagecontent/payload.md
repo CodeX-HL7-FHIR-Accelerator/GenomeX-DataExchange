@@ -45,9 +45,10 @@ MSH|^~\&|GENOMICREFLAB_LIS_APP|GENOMICREFLAB|GXSANCTUARY_HL7V2APP|GXSANCTUARY|20
 PID|1||MRN9876^^^^MR||M^Jenny||||||||||||||||
 PV1|1||||||||||||||||||<Encounter serial no>|||||||||||||||||||
 ORC|OE|22334455
-OBR|1|22334455|66778899|AB123^Genomic Test Name^GENOMICREFLAB_CS|||20240108091800|||||||||Owen Oncologist||||||20240108091800|||F
-OBX|1|ED|Document^FHIR Genomics Report||^Application^JSON^text^{"resourceType": "Bundle","id": "GenomicRefLab-bundle-example","type": "collection",etc.}||||||F|
-OBX|2|ED|Document^PDF Report||^Application^PDF^Base64^JVBER...base64EncodedPDF...etc.||||||F|
+OBR|1|22334455|66778899|81479^Molecular Pathology and Genetic Testing^CPT^TEST123^Cancer Gene Panel^GENOMICREFLAB_CS|||20240108091800|||||||||Owen Oncologist||||||20240108091800|||F
+OBX|1|ST|81247-9^Master HL7 genetic variant reporting panel^LN||^^||||||F
+OBX|2|ED|51969-4^Genetic Analysis Report^LN||^application^json^A^{"resourceType": "Bundle","id": "GenomicRefLab-bundle-example","type": "collection",etc.}||||||F|
+OBX|3|ED|51969-4^Genetic Analysis Report^LN||^application^pdf^Base64^JVBER...base64EncodedPDF...etc.||||||F|
 ```
 
 An abbreviated code snippet of an HL7v2 message with a reference pointer to a FHIR bundle is shown below:
@@ -56,7 +57,7 @@ MSH|^~\&|GENOMICREFLAB_LIS_APP|GENOMICREFLAB|GXSANCTUARY_HL7V2APP|GXSANCTUARY|20
 PID|1||MRN9876^^^^MR||M^Jenny||||||||||||||||
 PV1|1||||||||||||||||||<Encounter serial no>|||||||||||||||||||
 ORC|OE|22334455
-OBR|1|22334455|66778899|AB123^Genomic Test Name^GENOMICREFLAB_CS|||20240108091800|||||||||Owen Oncologist||||||20240108091800|||F
+OBR|1|22334455|66778899|81479^Molecular Pathology and Genetic Testing^CPT^TEST123^Cancer Gene Panel^GENOMICREFLAB_CS|||20240108091800|||||||||Owen Oncologist||||||20240108091800|||F
 OBX|1|RP|81247-9^Master HL7 genetic variant reporting panel^LN||https://example.org/genomicreflabfhirserver/open/DiagnosticReport/gx-genomic-report-genomicreflab-patient-ptfirstname-ptlastname^^||||||F
 ```
 
