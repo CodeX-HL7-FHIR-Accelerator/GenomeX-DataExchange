@@ -4,7 +4,8 @@ This GenomeX IG describes FHIR resources for genomic test results with the goal 
 
 This supplemental content is intended to frame the transport options when blending HL7v2 ordering with FHIR results to complete the request/reply exchange between order placers (HCO/EHR) and order fillers (Lab).  The options presented here assume HL7v2 ORM/ORU message exchange is a baseline capability offered by most EHR vendors and Labs.
 
-This supplemental content guide is intended to describe an HL7v2 to FHIR transition architecture.  For a pure FHIR API approach to ordering, see [TODO: Which Ordering IG?]
+This supplemental content guide is intended to describe an HL7v2 to FHIR transition architecture.
+
 
 The content presented under each scenario header below describes the data and transport relationships between the HL7 ORM/ORU messages and the GenomeX FHIR bundle.
 
