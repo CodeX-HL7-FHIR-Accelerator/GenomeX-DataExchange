@@ -48,7 +48,7 @@ ORC|OE|22334455
 OBR|1|22334455|66778899|81479^Molecular Pathology and Genetic Testing^CPT^TEST123^Cancer Gene Panel^GENOMICREFLAB_CS|||20240108091800|||||||||Owen Oncologist||||||20240108091800|||F
 OBX|1|ST|81247-9^Master HL7 genetic variant reporting panel^LN||^^||||||F
 OBX|2|ED|51969-4^Genetic Analysis Report^LN||^application^json^A^{"resourceType": "Bundle","id": "GenomicRefLab-bundle-example","type": "collection",etc.}||||||F|
-OBX|3|ED|51969-4^Genetic Analysis Report^LN||^application^pdf^Base64^JVBER...base64EncodedPDF...etc.||||||F|
+OBX|3|ED|GENOMICREPORT-PDF^Genetic Analysis Report (PDF Format)^GENOMEX_CS||^application^pdf^Base64^JVBER...base64EncodedPDF...etc.||||||F|
 ```
 
 An abbreviated code snippet of an HL7v2 message with a reference pointer to a FHIR bundle is shown below:
