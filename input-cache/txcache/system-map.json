@@ -1,0 +1,79 @@
+{
+  "systems" : [
+    {
+      "system" : "http://clinicaltrials.gov",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "authoritative" : ["http://tx.fhir.org/r4"],
+      "candidates" : []
+    },
+    {
+      "system" : "http://loinc.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "authoritative" : ["http://tx.fhir.org/r4"],
+      "candidates" : []
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://varnomen.hgvs.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "http://www.genenames.org",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://www.ncbi.nlm.nih.gov/refseq",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "http://www.sequenceontology.org/",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://www.laborg1.com",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://www.mytestpathlab.com",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "https://www.ncbi.nlm.nih.gov/gene",
+      "authoritative" : [],
+      "candidates" : []
+    }
+  ]
+}

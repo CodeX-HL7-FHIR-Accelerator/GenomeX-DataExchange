@@ -52,3 +52,6 @@ input-cache/txcache/umls.cache
 target/*
 .mvn/wrapper/maven-wrapper.jar
 *.jar
+*.cache
+*.cache
+*.ctl
