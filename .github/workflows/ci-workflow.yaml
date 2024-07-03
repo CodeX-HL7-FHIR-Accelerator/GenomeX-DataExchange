@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - 'gh-pages'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: hl7fhir/ig-publisher-base:latest
+    steps:
+      - name: install sushi
+        run: npm install -g fsh-sushi
+        
+      - name: clone scripts 
+        run: gosu publisher git clone https://github.com/HL7/ig-publisher-scripts.git /home/publisher/bin
+     
+      - name: create input cache directory
+        run: mkdir input-cache
+        
+      - name: update publisher
+        run:  _updatePublisher.sh -y
+
+      - name: Checkout ./core
+        uses: actions/checkout@v2
+        with:
+          path: core
+          
+      - name: Run ls on scripts directory 
+        run: ls 
+        
+      - name: Run publisher command
+        run: java -jar ./input-cache/publisher.jar publisher -ig core
