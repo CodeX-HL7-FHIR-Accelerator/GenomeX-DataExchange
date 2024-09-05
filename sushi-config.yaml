@@ -82,8 +82,9 @@ menu:
   Home: index.html
   Artifacts: artifacts.html
   Guidance:
+    Report Overview: overview.html
     Transport: transport.html
-    Payload: payload.html
+    Content (Payload): payload.html
   Examples:
     Extended Example: example_extended.html
 
