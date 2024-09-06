@@ -93,10 +93,10 @@ menu:
     Transport: transport.html
     Payload: payload.html
   Reporting:
-    Somatic Testing: somatic_reporting.md
-    Germline Oncology Testing: germline_oncology_reporting.md
-    Germline Prenatal Testing: germline_prenatal_reporting.md
-    Biomarker Testing: biomarker_reporting.md
+    Somatic Testing: somatic_reporting.html
+    Germline Oncology Testing: germline_oncology_reporting.html
+    Germline Prenatal Testing: germline_prenatal_reporting.html
+    Biomarker Testing: biomarker_reporting.html
   Examples:
     Extended Example: example_extended.html
 
