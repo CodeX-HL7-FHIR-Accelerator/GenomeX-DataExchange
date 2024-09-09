@@ -34,7 +34,7 @@ The two options will include:
 The RP value contains a pointer to the data e.g., a URL of an FHIR genomic test result. The receiving system can use this reference pointer whenever it needs access to the actual data through other interface standards.
 
 <figure>
-    <img src="GenomeX_Data_Exchange_Bundle_Types.jpg"
+    <img src="GenomeX_Data_Exchange_Bundle_Types.jpg" 
          alt="Data Exchange bundle types">
     <figcaption>Figure 2. Data Exchange bundle types</figcaption>
 </figure>
@@ -112,6 +112,7 @@ The following three values provide an example:
 ### Implementation / Validation Venues
 The decisions and consensus reached by the GenomeX Data Exchange community through the described process have been extensively tested and validated at HL7 FHIR Connectathons, including the May 2023 Clinical Genomics track (Connectathon 33) and the January 2024 Clinical Genomics - CodeX (GenomeX) track (Connectathon 35). Please refer to the following links for detailed information:
 
-- [HL7 FHIR Connectathon 33 Clinical Genomics - May 2023](https://confluence.hl7.org/display/FHIR/2023+-+05+Clinical+Genomics)
-- [HL7 FHIR Connectathon 35 Clinical Genomics - CodeX (GenomeX) - January 2024](https://confluence.hl7.org/pages/viewpage.action?pageId=204279063)
+- [HL7 FHIR Connectathon 33 Clinical Genomics - May 2023](https://confluence.hl7.org/x/XhGkC)
+- [HL7 FHIR Connectathon 35 Clinical Genomics - CodeX (GenomeX) - January 2024](https://confluence.hl7.org/x/Fw0tD)
+- [HL7 FHIR Connectathon 35 CodeX/GenomeX Data Exchange](https://confluence.hl7.org/x/UBhKDw)
 

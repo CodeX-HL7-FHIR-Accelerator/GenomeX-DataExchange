@@ -25,7 +25,9 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-    hl7.fhir.uv.genomics-reporting: 2.0.0 # Used during GenomeX Phase 0.
+    # Will need to be updated once the GRIG STU3 ballot is approved in late 2024.
+    hl7.fhir.uv.genomics-reporting: 3.0.0-ballot # Used during GenomeX Phase 1.
+#   hl7.fhir.uv.genomics-reporting: 2.0.0 # Used during GenomeX Phase 0.
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode

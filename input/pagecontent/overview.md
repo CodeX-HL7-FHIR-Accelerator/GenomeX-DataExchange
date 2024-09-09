@@ -28,11 +28,11 @@ Through work with commercial labs and EHR vendors in the GDX community, multiple
 In both cases the laboratory (source) send an HL7v2 message to the healthcare organization (target). In the first case, the target receives the message, decodes the FHIR bundle, then is able to deliver it to their FHIR server. In the second case, the target receives the reference pointer (aka link) to the source's FHIR server, then requests the FHIR resource(s) and finally delivers the resource(s) to the target FHIR server.
 
 <figure>
-    <object data="genomeX_transport_option_1.svg" type="image/svg+xml"></object>
+    <object data="genomeX_transport_option_1.svg" type="image/svg+xml" width="70%"></object>
     <figcaption>Figure 3. HL7v2 transport option for an embedded FHIR bundle</figcaption>
 </figure>
 
 <figure>
-    <object data="genomeX_transport_option_2.svg" type="image/svg+xml"></object>
+    <object data="genomeX_transport_option_2.svg" type="image/svg+xml" width="70%"></object>
     <figcaption>Figure 4. HL7v2 transport option for a reference pointer to a FHIR server</figcaption>
 </figure>
