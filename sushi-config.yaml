@@ -9,7 +9,7 @@ name: GenomeXDataExchange
 title: GenomeX Data Exchange FHIR IG
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.2.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -25,7 +25,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.genomics-reporting: 2.0.0
+    hl7.fhir.uv.genomics-reporting: 2.0.0 # Used during GenomeX Phase 0.
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -47,14 +47,22 @@ dependencies:
 pages:
   index.md:
     title: GenomeX Data Exchange
+  overview.md:
+    title: Overview 
   payload.md:
     title: Report Content (Payload)
   transport.md:
     title: Transport Messaging
+  somatic_reporting.md:
+    title: Somatic Test Reporting
+  germline_oncology_reporting.md:
+    title: Germline Oncology Test Reporting
+  germline_prenatal_reporting.md:
+    title: Germline Prenatal Test Reporting
+  biomarker_reporting.md:
+    title: Biomarker Test Reporting
   example_extended.md:
     title: Extended Example
-  overview.md:
-    title: Overview 
 
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -103,6 +111,11 @@ menu:
 # ContactDetail.
 #
 contact:
+  - name: James Patterson
+    telecom:
+      - system: email # phone | fax | email | pager | url | sms | other
+        value: jpatterson@mitre.org
+        use: work  
   - name: May Terry
     telecom:
       - system: email # phone | fax | email | pager | url | sms | other

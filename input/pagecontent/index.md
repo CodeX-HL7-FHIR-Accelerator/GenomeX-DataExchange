@@ -68,4 +68,4 @@ Details for Transport are described in [Transport Messaging](transport.html)
 
 ### Credits
 
-Our thanks to the contributors to the CodeX/GenomeX data exchange work stream which drives the guidance in this IG.
+Our thanks to the contributors to the CodeX/GenomeX data exchange work stream which drive the guidance in this IG.
