@@ -90,8 +90,9 @@ menu:
   Home: index.html
   Artifacts: artifacts.html
   Guidance:
+    Report Overview: overview.html
     Transport: transport.html
-    Payload: payload.html
+    Content (Payload): payload.html
   Reporting:
     Somatic Testing: somatic_reporting.html
     Germline Oncology Testing: germline_oncology_reporting.html

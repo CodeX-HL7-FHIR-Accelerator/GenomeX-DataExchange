@@ -13,11 +13,11 @@ As shown in Figure 1 below, the Genomic payload has multiple resources, the prin
 ### Payload Development Process
 The Data Exchange use case worked across the data creating member to develop the initial consensus for genomic report information that would be included in Phase 0, the initial implementation of the GRIG. To understand what data required FHIR representation, the members provided the basic data elements  that needed to be delivered as part of their existing genomic test results. Along with the data elements, metadata about each element were also captured, including any required elements, data element code system(s), and code systems that can be implemented now or in the future. 
 
-Once the data elements were catalogued, the members mapped them to an appropriate set of FHIR resources based on FHIR R4, the GRIG STU2, and mCODE STU3. The results were compared across the report producers to determine the overlapping set of FHIR resources. Those that were common or closely aligned between the report producers were agreed upon as the initial set for this IG.
+Once the data elements were catalogued, the members mapped them to an appropriate set of FHIR resources based on FHIR R4, the GRIG STU3, and mCODE STU3. The results were compared across the report producers to determine the overlapping set of FHIR resources. Those that were common or closely aligned between the report producers were agreed upon as the initial set for this IG.
 
 These data elements were the focus of Phase 0 and will represent a starting point for this IG. 
 
-For additional context, samples for a variety of report types, such as general genomic reporting, somatic reporting, variant reporting, and PGx reporting are available under the [How to Use This Guide](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html#how-to-use-this-guide) section of the [Genomics Reporting IG (STU2)](http://hl7.org/fhir/uv/genomics-reporting/STU2).
+For additional context, samples for a variety of report types, such as general genomic reporting, somatic reporting, variant reporting, and PGx reporting are available under the [How to Use This Guide](https://build.fhir.org/ig/HL7/genomics-reporting/#how-to-use-this-guide) section of the [Genomics Reporting IG (STU3)](https://build.fhir.org/ig/HL7/genomics-reporting/).
 
 ### Outcomes 
 The major outcomes of the payload development process are represented by the constraints on the FHIR resources in this IG and shown in the profiles. In addition, there are other design decisions that are shown below to help guide the Data Exchange community through early implementation of FHIR in their workflows. 
