@@ -1,6 +1,6 @@
 
 ### Background
-There is an ongoing need to expand and standardize genomic test results that are exchanged between laboratories, EHR vendors and other interested stakeholders.  The work of the [HL7 Clinical Genomics Working Group (CGWG)](https://confluence.hl7.org/display/CGW) and their [HL7 Genomics Reporting FHIR Implementation Guide (GRIG)](http://hl7.org/fhir/uv/genomics-reporting/STU2/), to design and build, scalable FHIR genomics interfaces, is enabling the appropriate data to be sent to EHRs and genomics repositories.
+There is an ongoing need to expand and standardize genomic test results that are exchanged between laboratories, EHR vendors and other interested stakeholders.  The work of the [HL7 Clinical Genomics Working Group (CGWG)](https://confluence.hl7.org/display/CGW) and their [HL7 Genomics Reporting FHIR Implementation Guide (GRIG)](https://build.fhir.org/ig/HL7/genomics-reporting/), to design and build, scalable FHIR genomics interfaces, is enabling the appropriate data to be sent to EHRs and genomics repositories.
 
 The Genomics Reporting IG is a comprehensive guide, but is too broad for the specific needs of the GenomeX Data Exchange community. More specific guidance is needed to constrain the GRIG to meet the scope of the Data Exchange use case.
 
@@ -11,7 +11,7 @@ This FHIR implementation guide (IG) is intended to organize modeling guidance fo
 ### Scope
 
 This first draft will focus on the following:
-* Genomics Reporting FHIR IG 2.0.0
+* Genomics Reporting FHIR IG 3.0.1
 * mCODE STU 3.0.0
 * FHIR R4
 * a basic set of data elements usable by providers for diagnosis, treatment, and monitoring
