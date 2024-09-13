@@ -12,6 +12,7 @@ The figure below shows the initial scope of the Data Exchange use case, deliveri
          alt="Overview diagram of the Data Exchange use case including transport and payload of HL7 FHIR test results being sent from Genomic Laboratories to Health Care Organizations">
     <figcaption>Figure 1. Initial Scope: Lab sends results to healthcare organization via FHIR</figcaption>
 </figure>
+
 #### Genomic Payload
 The payload sub-group focuses on developing the FHIR-based representation of the genomic test result reports.  The sub-group develops consensus between the multiple report producers regarding the data elements that are critical for use when delivering reports for specific genetic testing categories.  That consensus can range from indicating must support for the report receiver,  to the code system best suited for a specific data element, to which data elements are required for genomic test result reporting. More specific details regarding this topic can be found on the [Payload page](payload.html). 
 
