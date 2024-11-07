@@ -72,15 +72,15 @@ Usage: #example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Observation"
 * entry[+].fullUrl = "urn:uuid:c5s0f176-e402-4eaf-989c-959e80d91a11"
-* entry[=].resource = ct-xT-GeneList
+* entry[=].resource = ct-xT-GeneList3
 * entry[=].request.method = #POST
 * entry[=].request.url = "DocumentReference"
 * entry[+].fullUrl = "urn:uuid:22263097-6033-41af-9f6a-d7b012e27bbb"
-* entry[=].resource = ct-xT-genomicStudyAnalysis
+* entry[=].resource = ct-xT-genomicStudyAnalysis8
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 * entry[+].fullUrl = "urn:uuid:88f2715b-10ea-42ae-a3a2-185b14e6e666"
-* entry[=].resource = ct-xT-genomicStudy-2
+* entry[=].resource = ct-xT-genomicStudy-9
 * entry[=].request.method = #POST
 * entry[=].request.url = "Procedure"
 
@@ -106,6 +106,10 @@ Usage: #inline
 Instance: gx-genomics-report-C3PO
 InstanceOf: GdxGenomicReport
 Usage: #inline
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note"
+* extension[=].valueAnnotation.extension.url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/annotation-code"
+* extension[=].valueAnnotation.extension.valueCodeableConcept.coding.code = #copyright
+* extension[=].valueAnnotation.text = "(c) Copyright Tempus 2022. All Rights Reserved."
 * extension.valueReference = Reference(urn:uuid:88f2715b-10ea-42ae-a3a2-185b14e6e666)
 * identifier[0].type = $v2-0203#ACSN "Accession ID"
 * identifier[=].system = "https://www.tempus.com"
@@ -332,7 +336,7 @@ Usage: #inline
 * valueCodeableConcept = $loinc#LA6576-8 "Positive"
 * specimen = Reference(urn:uuid:1a9edfe1-1620-4882-a81c-30c2f254f34f)
 
-Instance: ct-xT-GeneList
+Instance: ct-xT-GeneList3
 InstanceOf: DocumentReference
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-data-file"
@@ -345,7 +349,7 @@ Usage: #inline
 * content.attachment.title = "GeneList"
 * content.attachment.creation = "2019-03-01T01:02:01+01:00"
 
-Instance: ct-xT-genomicStudyAnalysis
+Instance: ct-xT-genomicStudyAnalysis8
 InstanceOf: Procedure
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis"
@@ -361,7 +365,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:43e09316-c616-4b23-81df-e546d2b95c41)
 * performedDateTime = "2023-02-02T01:01:10-06:00"
 
-Instance: ct-xT-genomicStudy-2
+Instance: ct-xT-genomicStudy-9
 InstanceOf: Procedure
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study"
