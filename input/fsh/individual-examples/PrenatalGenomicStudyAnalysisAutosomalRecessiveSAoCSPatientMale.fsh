@@ -1,0 +1,32 @@
+Instance: PrenatalGenomicStudyAnalysisAutosomalRecessiveSAoCSPatientMale
+InstanceOf: Procedure
+Usage: #example
+* meta.versionId = "1"
+* meta.lastUpdated = "2024-10-02T03:41:29.698+00:00"
+* meta.source = "#DEqMJP5Koyub2naR"
+* meta.profile = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis"
+* extension[0].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-genomic-source-class"
+* extension[=].valueCodeableConcept = $loinc#LA6683-2 "Germline"
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-genome-build"
+* extension[=].valueCodeableConcept = $loinc#LA14029-5 "GRCh37"
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions"
+* extension[=].extension[0].url = "description"
+* extension[=].extension[=].valueString = "Exons sequenced"
+* extension[=].extension[+].url = "studied"
+* extension[=].extension[=].valueCodeableConcept = $refseq#NM_014363 "Exons: NM_014363:2-10"
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-regions"
+* extension[=].extension[0].url = "description"
+* extension[=].extension[=].valueString = "Genes studied"
+* extension[=].extension[+].url = "studied"
+* extension[=].extension[=].valueCodeableConcept = $genenames#HGNC:10519 "SACS"
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
+* extension[=].valueCodeableConcept = $loinc#101397-8 "Copy number variation analysis in Blood or Tissue by Sequencing"
+* extension[+].url = "http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-study-analysis-method-type"
+* extension[=].valueCodeableConcept = $genomic-study-method-type-cs#sequence-analysis-of-select-exons "Sequence analysis of select exons"
+* status = #completed
+* subject = Reference(PatientMale)
+* performedDateTime = "2024-07-09"
+* note[0].text = "autosomal recessive spastic ataxia of Charlevoix-Saguenay - SACS. Autosomal recessive inheritance. sequencing with copy number analysis. Detection rate: Northern European 99%"
+* note[+].text = "No disease-causing mutations were detected in any other gene tested for autosomal recessive spastic ataxia of Charlevoix-Saguenay"
+* note[+].text = "Report content approved by PractitionerJane Smith, PhD, FACMG, CGMB on Jul 9, 2024"
+* note[+].text = "Report content approved by Krista Moyer, MGC on Jul 9, 2024"
