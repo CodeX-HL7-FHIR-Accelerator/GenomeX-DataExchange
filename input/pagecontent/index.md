@@ -54,6 +54,16 @@ The transport sub-group focused on the mechanism to exchange the FHIR payload be
 
 Details for Transport are described in [Transport Messaging](transport.html)
 
+### Germline Reporting
+
+As with general genomics reporting, germline reports are centered around findings (variants, haplotypes, genotypes, biomarkers) and annotations derived from those findings (diagnostic implications, risk assessments). These constructs are assembled within the broader context of the Genomics Report, which generally contains information about the specimen(s) and providers and organizations involved in the ordering and testing process. The report may also contain details about the genomic study analyses used to obtain the findings.
+
+However, germline reports often differ from typical genomics reports in patterns of structure and heirarchy. For example, prenatal reports that report the risk of inheriting a genetic disease or defect offer results which depend on variants coming from two prospective parents. In such cases, genomic reports are nested in a dependent structure so that resutls are still encapsulated by one single, overarching report.
+
+|-|-|
+|[Hereditary Cancer Testing](germline_oncology_reporting.html)|Provides guidance for germline variant reporting in hereditary cancer.|
+|[Prenatal Carrier Screening](germline_prenatal_reporting.html)|Provides guidance for prenatal carrier screening involving one or two reproductive partners.|
+
 ### Dependencies
   <p>{% include dependency-table.xhtml %} </p>
 

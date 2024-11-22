@@ -26,6 +26,7 @@ Thumbs.db
 #######################
 .vscode
 .idea
+.devcontainer
 
 # Microsoft Office temp files #
 ###############################
