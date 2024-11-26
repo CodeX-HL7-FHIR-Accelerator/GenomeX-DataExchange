@@ -7,6 +7,6 @@ Usage: #example
 * status = #final
 * subject = Reference(PatientMale)
 * occurrenceDateTime = "2024-07-09"
-* basis = Reference(PrenatalVariantFamilialHyperinsulinismAbPatientMale)
+* basis = Reference(PrenatalVariantFamilialHyperinsulinismPatientMale)
 * prediction.outcome.text = "Patient has a disease-causing mutation for familial hyperinsulinism, ABCC8-related"
 * prediction.probabilityDecimal = 0.00005850664934601126

@@ -1,4 +1,4 @@
-Instance: PrenatalVariant1SNPAlpha1AntitrypsinDeficiePatientMale
+Instance: PrenatalVariant1SNPAlpha1ADPatientMale
 InstanceOf: Observation
 Usage: #example
 * meta.versionId = "1"

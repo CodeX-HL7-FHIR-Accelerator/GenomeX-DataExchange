@@ -14,7 +14,7 @@ Usage: #example
 * subject = Reference(PatientMale)
 * effectiveDateTime = "2024-07-09"
 * performer = Reference(PractitionerLabDirector)
-* derivedFrom = Reference(PrenatalVariantFamilialHyperinsulinismAbPatientMale)
+* derivedFrom = Reference(PrenatalVariantFamilialHyperinsulinismPatientMale)
 * component[0].code = $loinc#81259-4 "Associated phenotype"
 * component[=].valueCodeableConcept = $sct#312969002 "Normal genetic findings (finding)"
 * component[+].code = $loinc#81259-4 "Associated phenotype"

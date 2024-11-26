@@ -37,9 +37,9 @@ Usage: #example
 * performer[0] = Reference(Organization)
 * performer[+] = Reference(PractitionerLabDirector)
 * specimen = Reference(PrenatalSpecimenPatientMale)
-* result[0] = Reference(PrenatalVariantFamilialHyperinsulinismAbPatientMale)
+* result[0] = Reference(PrenatalVariantFamilialHyperinsulinismPatientMale)
 * result[+] = Reference(PrenatalVariantAutosomalRecessiveSAoCSPatientMale)
-* result[+] = Reference(PrenatalVariant1SNPAlpha1AntitrypsinDeficiePatientMale)
+* result[+] = Reference(PrenatalVariant1SNPAlpha1ADPatientMale)
 * result[+] = Reference(PrenatalReprDiagImpFamilialHyperinsulinismPatientMale) "Type 2 diabetes mellitus"
 * result[+] = Reference(PrenatalReprDiagImpAutosomalRecessiveSAoCSPatientMale) "ARSACS - autosomal recessive spastic ataxia of Charlevoix-Saguenay"
 * result[+] = Reference(PrenatalReprDiagImpAlpha1ADPatientMale) "Alpha-1-antitrypsin deficiency"
