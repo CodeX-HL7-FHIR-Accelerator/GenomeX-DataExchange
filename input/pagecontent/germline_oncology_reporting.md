@@ -1,22 +1,22 @@
 ### Building a Hereditary Cancer Testing Report: An Example
 
-It is also important to report germline variants which carry important diagnostic implications for a patient's cancer risk later in life. Luckily, this type of report is comparatively simple to put together relative to other germline applications. 
+It is important to report germline variants which carry important diagnostic implications for a patient's cancer risk later in life. This type of report is comparatively simple to put together relative to other germline applications. 
 
-#### Example HereditaryCancerTestingReport
+#### Example PDF HereditaryCancerTestingReport
 
-Here is a sample HereditaryCancerTesting report for a single patient.
+Here is a sample HereditaryCancerTesting PDF report for a single patient.
 
-<img src="HereditaryCancerTestingReport.pdf" alt="Carrier Screening Report" style="max-width: 100%; height: auto;">
+<img src="HereditaryCancerTestingReport.pdf" alt="Carrier Screening Report PDF" style="max-width: 100%; height: auto;">
 
 ##### Example FHIR HereditaryCancerTesting Report
 
 The following diagram gives a visual representation for how FHIR resources based on the above sample HereditaryCancerTesting report relate to each other. 
 
-<img src="HereditaryCancerTestingERD.pdf" alt="Carrier Screening Report" style="max-width: 100%; height: auto; display: block">
+<img src="HereditaryCancerTestingERD.pdf" alt="Carrier Screening Report ERD" style="max-width: 100%; height: auto; display: block">
 
 ##### Example FHIR HereditaryCancerTestingInstances
 
-The numbers in the following table correspond to indices on the attached ERD.
+The numbers in the following table correspond to indices on the ERD pictured above.
 
 <table border="1" class="dataframe">
   <thead>
@@ -31,14 +31,14 @@ The numbers in the following table correspond to indices on the attached ERD.
   <tbody>
     <tr>
       <td>1</td>
-      <td><a href="https://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-genomic-report.html">Genomics Report</a></td>
+      <td><a href="https://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-genomic-report.html">Genomic Report</a></td>
       <td>Primary container of the overall report. This report will encompass all reported results.</td>
       <td><a href="DiagnosticReport-HereditaryCancerTestingDiagnosticReportNegative.html">HereditaryCancerTestingDiagnosticReportNegative</a></td>
       <td></td>
     </tr>
     <tr>
       <td>2a</td>
-      <td><a href="https://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-genomic-study.html">Genomics Study</a></td>
+      <td><a href="https://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-genomic-study.html">Genomic Study</a></td>
       <td>The genomics report can reference details of the genomic study that was performed in order to identify variants / haplotypes / genotypes / biomarkers.</td>
       <td><a href="Producure-HereditaryCancerTestingGenomicStudy.html">HereditaryCancerTestingGenomicStudy</a></td>
       <td>Raw genomic data files such as VCF generally contain far more data than that communicated in the report. BED files can precisely define regions of the genome that were studied or deemed uncallable.</td>
@@ -67,7 +67,7 @@ The numbers in the following table correspond to indices on the attached ERD.
     <tr>
       <td>5a</td>
       <td><a href="http://hl7.org/fhir/R4/servicerequest.html">Service Request</a></td>
-      <td>The genomics report references orders that led to the testing being reported.</td>
+      <td>The genomics report references orders that led to the results for the reported test.</td>
       <td><a href="ServiceRequest-HereditaryCancerTestingServiceRequest.html">HereditaryCancerTestingServiceRequest</a></td>
       <td></td>
     </tr>
@@ -111,7 +111,7 @@ The numbers in the following table correspond to indices on the attached ERD.
       <td><a href="https://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-diagnostic-implication.html">Diagnostic Implication</a></td>
       <td>The genomics report can include various types of genomic annotations such as diagnostic implications related to identified variants.</td>
       <td></td>
-      <td>Variant annotation knowledgebases generally differ in the types of annotations they supply. Different labs can potentially report different annotations. Annotations supplied by a lab can become out of date as genomics knowledge advances.</td>
+      <td>Variant annotation knowledgebases generally differ in the types of annotations they supply. Different labs can potentially report different annotations. Annotations such as 'variants of unknown significance' can be updated in the future through reanalysis.</td>
     </tr>
     <tr>
       <td>11</td>
@@ -137,7 +137,7 @@ The numbers in the following table correspond to indices on the attached ERD.
     <tr>
       <td>14</td>
       <td><a href="http://hl7.org/fhir/R4/task.html">Task</a></td>
-      <td>The genomics report references follow up recommendations for the patient(s).</td>
+      <td>The genomics report references follow up recommendations for the patient.</td>
       <td><a href="Task-HereditaryCancerTestingRecommendedFollowupNegative.html">HereditaryCancerTestingRecommendedFollowupNegative</a></td>
       <td></td>
     </tr>

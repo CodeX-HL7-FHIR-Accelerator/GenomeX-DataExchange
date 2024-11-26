@@ -56,11 +56,11 @@ Details for Transport are described in [Transport Messaging](transport.html)
 
 ### Germline Reporting
 
-As with general genomics reporting, germline reports are centered around findings (variants, haplotypes, genotypes, biomarkers) and annotations derived from those findings (diagnostic implications, risk assessments). These constructs are assembled within the broader context of the Genomics Report, which generally contains information about the specimen(s) and providers and organizations involved in the ordering and testing process. The report may also contain details about the genomic study analyses used to obtain the findings.
+As with general genomics reporting, germline reports are centered around findings (variants, haplotypes, genotypes, biomarkers) and annotations derived from those findings (diagnostic implications, risk assessments). These constructs are assembled within the broader context of the Genomics Report, which generally contains information about the specimen(s), providers and organizations involved in the ordering and testing process. The report may also contain details about the [genomic study analyses]( https://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-genomic-study-analysis.html) used to obtain the findings.
 
-However, germline reports often differ from typical genomics reports in patterns of structure and heirarchy. For example, prenatal reports that report the risk of inheriting a genetic disease or defect offer results which depend on variants coming from two prospective parents. In such cases, genomic reports are nested in a dependent structure so that resutls are still encapsulated by one single, overarching report.
+Some germline reports differ from typical genomics reports in patterns of structure and hierarchy. For example, prenatal reports indicate the risk of inheriting a genetic disease or defect depending on variants coming from two prospective parents. In such cases, genomic reports for multiple individuals are nested in a dependent structure so that results are still encapsulated by one single, overarching report.
 
-|-|-|
+|Type|Function|
 |[Hereditary Cancer Testing](germline_oncology_reporting.html)|Provides guidance for germline variant reporting in hereditary cancer.|
 |[Prenatal Carrier Screening](germline_prenatal_reporting.html)|Provides guidance for prenatal carrier screening involving one or two reproductive partners.|
 

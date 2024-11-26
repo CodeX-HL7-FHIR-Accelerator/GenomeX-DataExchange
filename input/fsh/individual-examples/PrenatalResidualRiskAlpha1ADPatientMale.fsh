@@ -7,6 +7,6 @@ Usage: #example
 * status = #final
 * subject = Reference(PatientMale)
 * occurrenceDateTime = "2024-07-09"
-* basis = Reference(PrenatalVariant1SNPAlpha1AntitrypsinDeficiePatientMale)
+* basis = Reference(PrenatalVariant1SNPAlpha1ADPatientMale)
 * prediction.outcome.text = "Patient has a disease-causing mutation for alpha-1 antitrypsin deficiency"
 * prediction.probabilityDecimal = 1

@@ -6,12 +6,12 @@ Usage: #example
 * entry[=].resource = PractitionerLabDirector
 * entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PatientMale"
 * entry[=].resource = PatientMale
-* entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalVariant1SNPAlpha1AntitrypsinDeficiePatientMale"
-* entry[=].resource = PrenatalVariant1SNPAlpha1AntitrypsinDeficiePatientMale
+* entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalVariant1SNPAlpha1ADPatientMale"
+* entry[=].resource = PrenatalVariant1SNPAlpha1ADPatientMale
 * entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalVariantAutosomalRecessiveSAoCSPatientMale"
 * entry[=].resource = PrenatalVariantAutosomalRecessiveSAoCSPatientMale
-* entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalVariantFamilialHyperinsulinismAbPatientMale"
-* entry[=].resource = PrenatalVariantFamilialHyperinsulinismAbPatientMale
+* entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalVariantFamilialHyperinsulinismPatientMale"
+* entry[=].resource = PrenatalVariantFamilialHyperinsulinismPatientMale
 * entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalResidualRiskAlpha1ADPatientMale"
 * entry[=].resource = PrenatalResidualRiskAlpha1ADPatientMale
 * entry[+].fullUrl = "http://hapi-fhir-server:8080/fhir/Bundle/PrenatalResidualRiskAutosomalRecessiveSAoCSPatientMale"
