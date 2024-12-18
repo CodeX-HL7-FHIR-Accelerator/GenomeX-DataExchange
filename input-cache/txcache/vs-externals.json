@@ -1,14 +1,16 @@
 {
+  "http://loinc.org/vs/LL4034-6" : null,
+  "http://loinc.org/vs/LL5323-2" : null,
+  "http://loinc.org/vs/LL541-4" : null,
+  "http://loinc.org/vs/LL4050-2" : null,
   "http://loinc.org/vs/LL378-1" : null,
   "http://loinc.org/vs/LL3994-2" : null,
   "http://loinc.org/vs/LL2938-0" : null,
   "http://loinc.org/vs/LL381-5" : null,
   "http://loinc.org/vs/LL1040-6" : null,
-  "http://loinc.org/vs/LL4034-6" : null,
   "http://loinc.org/vs/LL380-7" : null,
   "http://loinc.org/vs/LL1971-2" : null,
-  "http://loinc.org/vs/LL5323-2" : null,
-  "http://loinc.org/vs/LL541-4" : null,
+  "http://loinc.org/vs/LL5489-1" : null,
   "http://loinc.org/vs/LL4048-6" : null,
-  "http://loinc.org/vs/LL4050-2" : null
+  "http://loinc.org/vs/LL1037-2" : null
 }
