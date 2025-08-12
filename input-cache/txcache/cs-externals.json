@@ -1,0 +1,10 @@
+{
+  "urn:ietf:bcp:13|null" : null,
+  "https://myriad.com/identifiers/tests|null" : null,
+  "http://www.ebi.ac.uk/ipd/imgt/hla|null" : null,
+  "http://snomed.info/sct|http://snomed.info/sct/900000000000207008" : null,
+  "http://terminology.hl7.org/CodeSystem/v2-0360|2.7" : null,
+  "https://www.ncbi.nlm.nih.gov/gene|null" : null,
+  "https://www.tempus.com|null" : null,
+  "http://sequenceontology.org|null" : null
+}
