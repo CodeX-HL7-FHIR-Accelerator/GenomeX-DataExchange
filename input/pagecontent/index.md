@@ -16,7 +16,7 @@ This first draft will focus on the following:
 * FHIR R4
 * a basic set of data elements usable by providers for diagnosis, treatment, and monitoring
 * somatic tests
-* oncology-related GRIG profiles - Tumor mutation burden (TMB) and microsatellite instability (MSI)
+* oncology-related GRIG profiles such as Tumor mutation burden (TMB) and microsatellite instability (MSI)
 
 The following topics may include guidance but are not definitively in-scope at this time:
 * therapeutic drug implications
